@@ -1,7 +1,7 @@
-# ndo-ai-llama2
+# ndo-ai-llama
 
 A small Retrieval-Augmented Generation (RAG) chat API. It answers questions about a local
-document corpus using a locally-running [Ollama](https://ollama.com) `llama2` model for
+document corpus using a locally-running [Ollama](https://ollama.com) `llama3.2` model for
 generation and a HuggingFace sentence-transformer for embeddings, indexed with
 [Chroma](https://www.trychroma.com/) via [LlamaIndex](https://www.llamaindex.ai/).
 
@@ -34,7 +34,7 @@ top-level folders for the API, the doc corpus, and the Chroma viewer tool.
 - Python 3.10+
 - [Ollama](https://ollama.com) installed and running locally, with the model pulled:
   ```
-  ollama pull llama2
+  ollama pull llama3.2
   ```
 
 ## Setup
@@ -94,7 +94,7 @@ All settings are environment variables, loaded from `.env` (see `.env.example`):
 | `DOCS_DIR` | `./docs` | Source document corpus to index |
 | `INDEX_PERSIST_DIRECTORY` | `./data/chromadb` | Where the Chroma index is persisted |
 | `INIT_INDEX` | `false` | Force a full reindex of `DOCS_DIR` on startup |
-| `OLLAMA_MODEL` | `llama2` | Model name passed to Ollama |
+| `OLLAMA_MODEL` | `llama3.2` | Model name passed to Ollama |
 | `EMBED_MODEL_NAME` | `BAAI/bge-small-en-v1.5` | HuggingFace embedding model |
 | `HTTP_PORT` | `7654` | Flask server port |
 | `FLASK_DEBUG` | `false` | Flask debug mode (never enable in production - the debugger allows remote code execution) |

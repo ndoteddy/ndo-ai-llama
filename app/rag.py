@@ -50,7 +50,7 @@ class RagEngine:
         init_index: bool = False,
         llm: LLM | None = None,
         embed_model: BaseEmbedding | None = None,
-        ollama_model: str = "llama2",
+        ollama_model: str = "llama3.2",
         embed_model_name: str = "BAAI/bge-small-en-v1.5",
     ) -> None:
         self.docs_dir = Path(docs_dir)

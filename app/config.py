@@ -47,7 +47,7 @@ def load_config() -> AppConfig:
         docs_dir=os.getenv("DOCS_DIR", "./docs"),
         index_persist_directory=os.getenv("INDEX_PERSIST_DIRECTORY", "./data/chromadb"),
         init_index=_env_bool("INIT_INDEX", False),
-        ollama_model=os.getenv("OLLAMA_MODEL", "llama2"),
+        ollama_model=os.getenv("OLLAMA_MODEL", "llama3.2"),
         embed_model_name=os.getenv("EMBED_MODEL_NAME", "BAAI/bge-small-en-v1.5"),
         http_port=_env_int("HTTP_PORT", 7654),
         debug=_env_bool("FLASK_DEBUG", False),
