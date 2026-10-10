@@ -1,21 +1,17 @@
-huggingface-hub
-sentence-transformers
-
-Flask==2.0.1
-Werkzeug==2.2.2
+Flask~=3.0
+Werkzeug~=3.0
 flask-cors
-
-langchain==0.0.352
-tiktoken
-unstructured
-unstructured[local-pdf]
-unstructured[local-inference]
+python-dotenv
 
 llama-index
 llama-index-llms-ollama
 llama-index-embeddings-huggingface
+llama-index-vector-stores-chroma
+chromadb
+# chromadb pulls in orjson; orjson>=3.11 wheels get blocked by some Windows
+# Application Control / Smart App Control policies (DLL load failure).
+orjson<3.11
+
+huggingface-hub
+sentence-transformers
 torch
-
-# manually install below module to get rid of dependency install issues with `requirements.txt`
-# pip install llama-index-vector-stores-chroma
-

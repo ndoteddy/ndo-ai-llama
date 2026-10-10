@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: requires a locally running Ollama server (skipped by default)",
+]
+addopts = "-m 'not integration'"
